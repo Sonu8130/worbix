@@ -25,13 +25,23 @@ public class leftNavigation extends AbstractComponents {
 	@FindBy(css = ".fa-users")
 	WebElement contact;
 
+	@FindBy(css = ".fa-list")
+	WebElement list;
+
 	public people goToContact() {
 		waitForElementToAppear(targetElement1, 3);
 		mouseHover(targetElement);
 		contact.click();
 		people people = new people(driver);
 		return people;
+	}
 
+	public ListModule goToList() {
+		waitForElementToAppear(targetElement1, 3);
+		mouseHover(targetElement);
+		list.click();
+		ListModule listModule = new ListModule(driver);
+		return listModule;
 	}
 
 }

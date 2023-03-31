@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Contata1.PeopleTest">
+      <class name="Contata1.listPgaeTests">
         <methods>
-          <include name="TC_2_deletContact"/>
           <include name="launchApplication"/>
+          <include name="TC_03_CreateStaticList"/>
         </methods>
-      </class> <!-- Contata1.PeopleTest -->
+      </class> <!-- Contata1.listPgaeTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
