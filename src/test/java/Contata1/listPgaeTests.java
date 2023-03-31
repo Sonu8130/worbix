@@ -16,7 +16,7 @@ public class listPgaeTests extends BaseTest {
 		leftNavigation leftnavigation = loginPage.loginApplication("mikona@mailinator.com", "Worbix@1234");
 		ListModule listModule = leftnavigation.goToList();
 		listModule.createStaticList();
-
+		Assert.assertEquals(listModule.listActual, listModule.listName);
 	}
 
 }

@@ -1,5 +1,6 @@
 package Contata.PageObjects;
 
+import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -17,7 +18,7 @@ public class ListModule extends AbstractComponents {
 		PageFactory.initElements(driver, this);
 	}
 
-	String listName = "NewGenricList";
+	// String listName = "NewGenricList";
 	@FindBy(xpath = "(//button[@type='button'])[1]")
 	WebElement addListBtn;
 
@@ -30,6 +31,11 @@ public class ListModule extends AbstractComponents {
 	@FindBy(css = ".contact__name")
 	WebElement listTitle;
 
+	String rndmString = RandomStringUtils.random(2);
+	public String listName = "Group_" + rndmString;
+
+	public String listActual = listTitle.getText();
+
 	public void createStaticList() {
 		implicitlyWait(2);
 		addListBtn.click();
@@ -37,7 +43,6 @@ public class ListModule extends AbstractComponents {
 		enterListName.sendKeys(listName);
 		waitForElementToAppear(saveBtn, 2);
 		saveBtn.click();
-		Assert.assertEquals(listTitle.getText(), listName);
 
 	}
 
