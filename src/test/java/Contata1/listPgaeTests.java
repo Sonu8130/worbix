@@ -17,6 +17,8 @@ public class listPgaeTests extends BaseTest {
 		ListModule listModule = leftnavigation.goToList();
 		listModule.createStaticList();
 		Assert.assertEquals(listModule.listActual, listModule.listName);
+		System.out.println("hello");
+		System.out.println("hello");
 	}
 
 }
