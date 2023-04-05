@@ -18,31 +18,73 @@ public class ListModule extends AbstractComponents {
 		PageFactory.initElements(driver, this);
 	}
 
-	// String listName = "NewGenricList";
+	String rndmString = RandomStringUtils.randomNumeric(5);
+	public String listName = "Group_" + rndmString;
+
 	@FindBy(xpath = "(//button[@type='button'])[1]")
 	WebElement addListBtn;
 
 	@FindBy(xpath = "//li[@role='presentation'][1] //a[@role='menuitem']/span")
 	WebElement chooseStaticList;
+
 	@FindBy(css = ".form-control")
 	WebElement enterListName;
+
 	@FindBy(css = ".modal-footer button:last-child")
 	WebElement saveBtn;
+
 	@FindBy(css = ".contact__name")
-	WebElement listTitle;
+	WebElement listDetailsTitle;
 
-	String rndmString = RandomStringUtils.random(2);
-	public String listName = "Group_" + rndmString;
+	@FindBy(xpath = "//div[@class='sort__add']//button[2]")
+	WebElement addContactBtn;
 
-	public String listActual = listTitle.getText();
+	@FindBy(css = ".custom-control-label span")
+	WebElement selectAllContact;
+
+	@FindBy(css = "button[class*=btn-success]")
+	WebElement saveButton;
+
+	@FindBy(css = ".modal-footer.footer-wrapper .btn.btn-success")
+	WebElement saveListButton;
+
+	@FindBy(css = ".pagination__results span")
+	WebElement contactCount;
 
 	public void createStaticList() {
-		implicitlyWait(2);
+		implicitlyWait(10);
 		addListBtn.click();
 		chooseStaticList.click();
 		enterListName.sendKeys(listName);
 		waitForElementToAppear(saveBtn, 2);
 		saveBtn.click();
+	}
+
+	public String getTextMsg() {
+		return listDetailsTitle.getText();
+	}
+
+//	public String getContactCount() {
+//		String count = contactCount.getText();
+//		String[] temp = count.split("of");
+//		String[] conCount = temp[1].split(" ");
+//		String realCunt = conCount[0];
+//		return realCunt;
+//
+//	}
+
+	public void addContactInList() {
+		implicitlyWait(10);
+		addContactBtn.click();
+		waitForElementToAppear(selectAllContact, 5);
+		selectAllContact.click();
+		saveButton.click();
+		waitForElementToAppear(saveListButton, 5);
+		saveListButton.click();
+		String count = contactCount.getText();
+		String[] temp = count.split("of");
+		String[] conCount = temp[1].split(" ");
+		String realCunt = conCount[1];
 
 	}
 

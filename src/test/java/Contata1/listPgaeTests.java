@@ -12,14 +12,19 @@ public class listPgaeTests extends BaseTest {
 	WebDriver driver;
 
 	@Test
-	public void TC_03_CreateStaticList() {
+	public void TC_04_VerifyCreateStaticListName() {
 		leftNavigation leftnavigation = loginPage.loginApplication("mikona@mailinator.com", "Worbix@1234");
 		ListModule listModule = leftnavigation.goToList();
 		listModule.createStaticList();
-		Assert.assertEquals(listModule.listActual, listModule.listName);
-		System.out.println("hello");
-		System.out.println("hello");
-		System.out.println("hello");
+		Assert.assertEquals(listModule.getTextMsg(), listModule.listName);
+	}
+
+	@Test
+	public void TC_05_VerifyAddConatctToStaticList() {
+		leftNavigation leftnavigation = loginPage.loginApplication("mikona@mailinator.com", "Worbix@1234");
+		ListModule listModule = leftnavigation.goToList();
+		listModule.createStaticList();
+		listModule.addContactInList();
 	}
 
 }

@@ -6,7 +6,7 @@
       <class name="Contata1.listPgaeTests">
         <methods>
           <include name="launchApplication"/>
-          <include name="TC_03_CreateStaticList"/>
+          <include name="TC_05_VerifyAddConatctToStaticList"/>
         </methods>
       </class> <!-- Contata1.listPgaeTests -->
     </classes>
