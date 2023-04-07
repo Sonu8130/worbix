@@ -27,7 +27,7 @@ import Contata1.LoginPageTest;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseTest {
-	WebDriver driver;
+	public WebDriver driver;
 	public LoginPage loginPage;
 
 	public WebDriver InitializeDriver() throws IOException {
@@ -64,13 +64,13 @@ public class BaseTest {
 //		return data;
 //	}
 
-//	public String getScreenshot(String testcaseName, WebDriver driver) throws IOException {
-//		TakesScreenshot ts = (TakesScreenshot) driver;
-//		File source = ts.getScreenshotAs(OutputType.FILE);
-//		File file = new File(System.getProperty("user.dir")+"//reports//"+ testcaseName + ".png");
-//		FileUtils.copyFile(source, file);
-//		return System.getProperty("user.dir")+"//reports//"+ testcaseName + ".png";
-//	}
+	public String getScreenshot(String testcaseName, WebDriver driver) throws IOException {
+		TakesScreenshot ts = (TakesScreenshot) driver;
+		File source = ts.getScreenshotAs(OutputType.FILE);
+		File file = new File(System.getProperty("user.dir") + "//reports//" + testcaseName + ".png");
+		FileUtils.copyFile(source, file);
+		return System.getProperty("user.dir") + "//reports1//" + testcaseName + ".png";
+	}
 
 	@BeforeMethod(alwaysRun = true)
 	public LoginPage launchApplication() throws IOException {
