@@ -8,7 +8,7 @@ import java.time.Duration;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Properties;
-import java.util.concurrent.TimeUnit;
+
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
@@ -82,8 +82,7 @@ public class BaseTest {
 
 //	@AfterMethod(alwaysRun = true)
 //	public void tearDown() throws InterruptedException {
-//
-//		Thread.sleep(5000);
+//		Thread.sleep(10000);
 //		driver.close();
 //	}
 

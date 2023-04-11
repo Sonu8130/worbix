@@ -64,15 +64,6 @@ public class ListModule extends AbstractComponents {
 		return listDetailsTitle.getText();
 	}
 
-//	public String getContactCount() {
-//		String count = contactCount.getText();
-//		String[] temp = count.split("of");
-//		String[] conCount = temp[1].split(" ");
-//		String realCunt = conCount[0];
-//		return realCunt;
-//
-//	}
-
 	public void addContactInList() {
 		implicitlyWait(10);
 		addContactBtn.click();
@@ -81,11 +72,17 @@ public class ListModule extends AbstractComponents {
 		saveButton.click();
 		waitForElementToAppear(saveListButton, 5);
 		saveListButton.click();
+
+	}
+
+	public int getAddedConCount() {
+
+		waitForElementToAppear(contactCount, 5);
 		String count = contactCount.getText();
 		String[] temp = count.split("of");
 		String[] conCount = temp[1].split(" ");
 		String realCunt = conCount[1];
-
+		int totalConCount = Integer.parseInt(realCunt);
+		return totalConCount;
 	}
-
 }
