@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testng-results ignored="5" total="6" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
@@ -12,10 +13,41 @@
           </reporter-output>
         </test-method> <!-- launchApplication -->
         <test-method signature="TC_04_VerifyCreateStaticListName()[pri:0, instance:Contata1.listPgaeTests@5e0826e7]" started-at="2023-05-16T18:29:43 IST" name="TC_04_VerifyCreateStaticListName" finished-at="2023-05-16T18:29:53 IST" duration-ms="9916" status="PASS">
+=======
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-04-12T13:15:07 IST" name="Suite" finished-at="2023-04-12T13:16:32 IST" duration-ms="84706">
+    <groups>
+    </groups>
+    <test started-at="2023-04-12T13:15:07 IST" name="Test" finished-at="2023-04-12T13:16:32 IST" duration-ms="84706">
+      <class name="Contata1.listPgaeTests">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Contata1.listPgaeTests@4d1c005e]" started-at="2023-04-12T13:15:07 IST" name="launchApplication" finished-at="2023-04-12T13:15:27 IST" duration-ms="19580" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="TC_04_VerifyCreateStaticListName()[pri:0, instance:Contata1.listPgaeTests@4d1c005e]" started-at="2023-04-12T13:15:27 IST" name="TC_04_VerifyCreateStaticListName" finished-at="2023-04-12T13:15:35 IST" duration-ms="8069" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_04_VerifyCreateStaticListName -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Contata1.listPgaeTests@4d1c005e]" started-at="2023-04-12T13:15:35 IST" name="launchApplication" finished-at="2023-04-12T13:15:50 IST" duration-ms="15096" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="TC_05_VerifyAddConatctToStaticList()[pri:0, instance:Contata1.listPgaeTests@4d1c005e]" started-at="2023-04-12T13:15:50 IST" name="TC_05_VerifyAddConatctToStaticList" finished-at="2023-04-12T13:15:55 IST" duration-ms="5475" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_05_VerifyAddConatctToStaticList -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Contata1.listPgaeTests@4d1c005e]" started-at="2023-04-12T13:15:55 IST" name="launchApplication" finished-at="2023-04-12T13:16:11 IST" duration-ms="16126" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="TC_05_VerifyContactCount()[pri:0, instance:Contata1.listPgaeTests@4d1c005e]" started-at="2023-04-12T13:16:11 IST" name="TC_05_VerifyContactCount" finished-at="2023-04-12T13:16:32 IST" duration-ms="20297" status="PASS">
+>>>>>>> e9fc8456027da3c46b8ba1c170b881292e2fc540
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_04_VerifyCreateStaticListName -->
       </class> <!-- Contata1.listPgaeTests -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
