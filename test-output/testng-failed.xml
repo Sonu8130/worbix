@@ -5,9 +5,8 @@
     <classes>
       <class name="Contata1.listPgaeTests">
         <methods>
-          <include name="TC_05_VerifyContactCount"/>
+          <include name="TC_04_VerifyCreateStaticListName"/>
           <include name="launchApplication"/>
-          <include name="tearDown"/>
         </methods>
       </class> <!-- Contata1.listPgaeTests -->
     </classes>

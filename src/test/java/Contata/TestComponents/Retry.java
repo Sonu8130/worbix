@@ -9,13 +9,10 @@ public class Retry implements IRetryAnalyzer {
 	int maxTry = 1;
 
 	public boolean retry(ITestResult result) {
-
 		if (count < maxTry) {
 			count++;
 			return true;
 		}
-
 		return false;
 	}
-
 }

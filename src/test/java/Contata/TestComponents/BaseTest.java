@@ -9,7 +9,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Properties;
 
-
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -39,14 +38,9 @@ public class BaseTest {
 		String BrowserName = prop.getProperty("Browser");
 
 		if (BrowserName.equalsIgnoreCase("chrome")) {
-
 			WebDriverManager.chromedriver().setup();
-			ChromeOptions options = new ChromeOptions();
-			options.addArguments("--remote-allow-origins=*");
-			driver = new ChromeDriver(options);
-
+			driver = new ChromeDriver();
 		}
-
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.manage().window().maximize();
 		return driver;

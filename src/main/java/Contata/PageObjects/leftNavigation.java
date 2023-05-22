@@ -27,6 +27,7 @@ public class leftNavigation extends AbstractComponents {
 
 	@FindBy(css = ".fa-list")
 	WebElement list;
+	
 
 	public people goToContact() {
 		waitForElementToAppear(targetElement1, 3);

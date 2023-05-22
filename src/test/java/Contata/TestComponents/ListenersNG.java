@@ -31,20 +31,18 @@ public class ListenersNG extends BaseTest implements ITestListener {
 	}
 
 	public void onTestFailure(ITestResult result) {
-		// TODO Auto-generated method stub
-
 		extentTest.get().fail(result.getThrowable());
 		try {
 			driver = (WebDriver) result.getTestClass().getRealClass().getField("driver").get(result.getInstance());
 		} catch (Exception e1) {
-			// TODO Auto-generated catch block
+
 			e1.printStackTrace();
 		}
 		String filePath = null;
 		try {
 			filePath = getScreenshot(result.getMethod().getMethodName(), driver);
 		} catch (IOException e1) {
-			// TODO Auto-generated catch block
+			
 			e1.printStackTrace();
 		}
 		extentTest.get().addScreenCaptureFromPath(filePath, result.getMethod().getMethodName());

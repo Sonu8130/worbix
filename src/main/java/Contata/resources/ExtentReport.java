@@ -16,7 +16,6 @@ public class ExtentReport {
 		extent.attachReporter(spark);
 		extent.setSystemInfo("Tester", "Sonu");
 		return extent;
-
 	}
 
 }
