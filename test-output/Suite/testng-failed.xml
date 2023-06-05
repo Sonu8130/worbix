@@ -14,6 +14,7 @@
           <include name="TC_07_VerifyContactCountInDynamicList"/>
           <include name="TC_06_VerifyCreateDynamicListName"/>
           <include name="TC_08_VerifyDeleteDynamicList"/>
+          <include name="TC_05_VerifyAddConatctToStaticList"/>
         </methods>
       </class> <!-- Contata1.listPgaeTests -->
     </classes>
